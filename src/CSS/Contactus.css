@@ -1,0 +1,139 @@
+/* Contact Us Page Styles */
+.contactus-container {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    color: white;
+    overflow-y: auto; /* Allows scrolling inside */
+}
+
+/* Main Heading */
+.contactus-container h2 {
+    font-size: 2.5rem;
+    color: #ffcc70;
+    margin-bottom: 1rem;
+}
+
+/* General Contact Section */
+.contact-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+/* Section Titles */
+.contact-section h3 {
+    font-size: 1.8rem;
+    color: #ff416c;
+    margin-bottom: 1rem;
+}
+
+/* Paragraph Styling */
+.contact-section p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+/* Links */
+.contact-section a {
+    color: #ffcc70;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Textarea */
+textarea {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Buttons */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff4b2b;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff416c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contactus-container {
+        top: 60%;
+        height: 80vh;
+    }
+    .contact-section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactus-container {
+        top: 55%;
+        height: 75vh;
+        padding: 1.5rem;
+    }
+    .contact-section h3 {
+        font-size: 1.3rem;
+    }
+    textarea {
+        font-size: 0.9rem;
+    }
+}
+/* Success Popup */
+.popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #28a745;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInOut 2s ease-in-out;
+}
+
+/* Animation for Popup */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    20% { opacity: 1; transform: translate(-50%, -50%); }
+    80% { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -40%); }
+}

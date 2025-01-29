@@ -1,0 +1,149 @@
+/* Disable scrolling on the whole page */
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Us Page - Fixed, Centered Box */
+.aboutus {
+  position: fixed; /* Fixes the section on screen */
+  top: 55%; /* Moves the box down */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers horizontally */
+  width: 90%;
+  max-width: 800px;
+  height: 85vh; /* Keeps content within the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  color: white;
+}
+
+/* Heading */
+.aboutus h2 {
+  font-size: 2.5rem;
+  color: #ffcc70;
+  margin-bottom: 1rem;
+}
+
+/* Description Text */
+.aboutus p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Highlighted Text */
+.aboutus span {
+  font-weight: bold;
+  color: #ff4b2b;
+}
+
+/* About Section Styling */
+.about-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+/* Section Headings */
+.about-section h3 {
+  font-size: 2rem;
+  color: #ff416c;
+}
+
+/* List Styling */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section li {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.about-section li::before {
+  content: "✔";
+  color: #ff416c;
+  margin-right: 0.5rem;
+}
+
+/* Footer Section */
+.about-footer {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.about-footer h3 {
+  font-size: 1.5rem;
+  color: #ffcc70;
+}
+
+.about-footer a {
+  color: #ff4b2b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+  .aboutus {
+    width: 95%;
+    height: 85vh;
+    padding: 1.5rem;
+  }
+
+  .aboutus h2 {
+    font-size: 2rem;
+  }
+
+  .aboutus p,
+  .about-section li {
+    font-size: 1rem;
+  }
+
+  .about-section h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus {
+    height: 80vh;
+    padding: 1rem;
+  }
+
+  .aboutus h2 {
+    font-size: 1.8rem;
+  }
+
+  .aboutus p {
+    font-size: 0.9rem;
+  }
+
+  .about-section {
+    padding: 1rem;
+  }
+
+  .about-section h3 {
+    font-size: 1.3rem;
+  }
+}
