@@ -8,6 +8,7 @@ import Aboutus from "./Pages/Aboutus";
 import Contactus from "./Pages/Contactus";
 import NavBar from "./Components/NavBar";
 import { MovieProvider } from "./Context/MovieContext";
+import MovieDetail from "./Pages/MovieDetails";
 import "./CSS/App.css"
 function App() {
   
@@ -18,6 +19,8 @@ function App() {
     <main className="main-content" >
     <Routes>
       <Route path="/" element={<Home/>}  />
+      <Route path="/movie/:id" element={<MovieDetail />} />
+
       <Route path="/favorite" element={<Favorite/>} />
       <Route path="/aboutus" element={<Aboutus/>} />
       <Route path="/contactus" element={<Contactus/>} />

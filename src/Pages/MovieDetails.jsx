@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import "../css/MovieDetail.css";
+import "../CSS/MovieDetail.css"
 
-//Static genre list based on your API data
+// Static genre list
 const genreList = [
   { id: 28, name: "Action" },
   { id: 35, name: "Comedy" },
   { id: 878, name: "Science Fiction" },
   { id: 10751, name: "Family" },
   { id: 53, name: "Thriller" },
-  // Add more genres as necessary
 ];
 
 const MovieDetail = () => {
@@ -21,12 +20,10 @@ const MovieDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // If movie is passed through state, use it directly.
     if (movie) {
       setMovieDetails(movie);
       setLoading(false);
     } else {
-      // Handle case where movie data is not passed
       setError("Movie not found");
       setLoading(false);
     }
@@ -35,7 +32,9 @@ const MovieDetail = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
-  const releaseYear = movieDetails.release_date ? movieDetails.release_date.split("-")[0] : "N/A";
+  const releaseYear = movieDetails.release_date
+    ? movieDetails.release_date.split("-")[0]
+    : "N/A";
   const genres = movieDetails.genre_ids
     ? movieDetails.genre_ids.map((genreId) => {
         const genre = genreList.find((g) => g.id === genreId);
@@ -46,7 +45,6 @@ const MovieDetail = () => {
   return (
     <div className="movie-detail">
       <div className="movie-header">
-        {/* Movie Poster */}
         {movieDetails.poster_path && (
           <img
             className="movie-poster"
@@ -54,7 +52,7 @@ const MovieDetail = () => {
             alt={`${movieDetails.title} Poster`}
           />
         )}
-        
+
         <div className="movie-info">
           <h1>{movieDetails.title}</h1>
           <p className="release-year">Release Year: {releaseYear}</p>
@@ -63,7 +61,6 @@ const MovieDetail = () => {
           </p>
           <p className="overview">{movieDetails.overview}</p>
 
-          {/* Genre */}
           <div className="additional-info">
             <p><strong>Genres:</strong> {genres.join(", ")}</p>
             <p><strong>Runtime:</strong> {movieDetails.runtime ? `${movieDetails.runtime} min` : "N/A"}</p>
@@ -72,18 +69,16 @@ const MovieDetail = () => {
         </div>
       </div>
 
-      {/* Backdrop Image */}
-      {movieDetails.backdrop_path && (
+      {/* {movieDetails.backdrop_path && (
         <div className="movie-backdrop">
           <img
             src={`https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`}
             alt={`${movieDetails.title} Backdrop`}
           />
         </div>
-      )}
+      )} */}
 
-      {/* Trailer */}
-      <div className="movie-trailer">
+      {/* <div className="movie-trailer">
         {movieDetails.videos?.results?.[0]?.key ? (
           <iframe
             width="560"
@@ -95,7 +90,7 @@ const MovieDetail = () => {
         ) : (
           <p>No trailer available</p>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -34,7 +34,7 @@ function ContactUs() {
       <div className="contact-section">
         <h3>📩 Get in Touch</h3>
         <p>Email: <a href="mailto:support@moviefinder.com">support@moviefinder.com</a></p>
-        <p>Phone: +1 234 567 890</p>
+        <p>Phone: +91 8579923654</p>
         <p>Follow us on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
       </div>
 
