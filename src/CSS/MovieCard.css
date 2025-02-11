@@ -46,6 +46,7 @@
 
 .movie-cards:hover .movie-overlays {
   opacity: 1;
+  cursor:pointer;
 }
 
 .favorites-btn {

@@ -15,7 +15,6 @@
     top: 10px;
     z-index: 1000;
     transition: all 0.3s ease-in-out;
-    flex-wrap: nowrap;
 }
 
 /* 🔥 Brand Name */
@@ -38,7 +37,7 @@
     gap: 0.8rem;
     justify-content: flex-end;
     align-items: center;
-    flex-wrap: nowrap;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-link {
@@ -49,7 +48,6 @@
     font-weight: 600;
     position: relative;
     transition: all 0.3s ease-in-out;
-    white-space: nowrap;
 }
 
 /* ✨ Fancy Gradient Hover Effect */
@@ -82,32 +80,42 @@
     font-size: 1.8rem;
     cursor: pointer;
     color: white;
+    z-index: 1100;
+    margin-left: auto; /* Move the hamburger to the right */
 }
 
 /* 🌙 Responsive Navbar */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row; /* Keep items in a row for mobile */
         padding: 0.8rem;
         width: 95%;
     }
 
+    .menu-icon {
+        display: block;
+    }
+
     .navbar-link {
-        display: flex;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
         gap: 0.5rem;
+        background: rgba(0, 0, 0, 0.9);
         width: 100%;
-        flex-wrap: wrap;
+        border-radius: 10px;
+        padding: 0.8rem 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-link.active {
+        display: flex;
     }
 
     .nav-link {
-        flex: 1 1 30%;
+        padding: 0.6rem;
+        font-size: 1rem;
         text-align: center;
-        padding: 0.3rem 0.6rem;
-        font-size: 0.85rem;
-    }
-
-    .menu-icon {
-        display: block;
     }
 }

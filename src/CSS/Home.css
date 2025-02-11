@@ -1,25 +1,31 @@
-.home {
-  padding: 2rem 0;
-  width: 100%;
-  box-sizing: border-box;
+/* 📦 Main Container for Navbar & Search Bar */
+.main-container {
+  transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Sticky, Centered, and Responsive Search Bar */
+/* 🖤 Sticky, Centered, and Responsive Search Bar */
 .search-form {
-  max-width: 50%; /* Controls the width */
-  margin: 0 auto;  /* Centers the search bar */
-  position: sticky; /* Sticks to the top when scrolling */
-  top: 0;
+  max-width: 50%;
+  margin: 0 auto;
+  position: sticky;
+  top: 60px; /* Space from the top (adjustable) */
   display: flex;
   gap: 1rem;
   padding: 0.75rem 1rem;
   box-sizing: border-box;
-  z-index: 1000; /* Ensures it's above other content */
+  z-index: 900;
   align-items: center;
-  background-color: #111; /* Optional for better visibility */
-  border-radius: 8px;     /* Optional rounded corners */
+  background-color: #111;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out; /* For smooth sliding */
 }
 
+/* 🚀 Move Search Bar Down When Menu is Active */
+.menu-active .search-form {
+  transform: translateY(100px); /* Adjust the distance as needed */
+}
+
+/* 🔍 Search Input */
 .search-input {
   flex: 1;
   padding: 0.75rem 1rem;
@@ -35,6 +41,7 @@
   box-shadow: 0 0 0 2px #666;
 }
 
+/* 🔴 Search Button */
 .search-button {
   padding: 0.75rem 1.5rem;
   background-color: #e50914;
@@ -51,24 +58,22 @@
   background-color: #f40612;
 }
 
-/* Responsive Adjustments */
+/* 🌙 Responsive Adjustments */
 @media (max-width: 639px) {
-  .home {
-    padding: 1rem 0;
-  }
-
   .search-form {
-    max-width: 100%; /* Full width on smaller screens */
-    flex-direction: column; /* Stack input and button */
+    max-width: 100%;
+    flex-direction: column;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
+    top: 70px; /* Adjust sticky position for mobile */
   }
 
   .search-button {
-    width: 100%; /* Full width for button on small screens */
+    width: 100%;
   }
 }
 
+/* 🎥 Movies Grid */
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

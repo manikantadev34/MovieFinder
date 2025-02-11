@@ -1,68 +1,62 @@
-/* Disable scrolling on the whole page */
+/* 🌍 Global Styles */
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* About Us Page - Fixed, Centered Box */
+/* 📄 About Us Page */
 .aboutus {
-  position: fixed; /* Fixes the section on screen */
-  top: 55%; /* Moves the box down */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers horizontally */
+  position: relative; /* Changed from fixed to relative */
+  top: 80px; /* Creates space below the navbar */
   width: 90%;
   max-width: 800px;
-  height: 85vh; /* Keeps content within the screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  margin: 0 auto; /* Center horizontally */
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-  padding: 2rem;
   color: white;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Heading */
+/* 🗒️ Heading */
 .aboutus h2 {
   font-size: 2.5rem;
   color: #ffcc70;
   margin-bottom: 1rem;
 }
 
-/* Description Text */
+/* 📜 Description Text */
 .aboutus p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-/* Highlighted Text */
+/* ✨ Highlighted Text */
 .aboutus span {
   font-weight: bold;
   color: #ff4b2b;
 }
 
-/* About Section Styling */
+/* 📦 About Section */
 .about-section {
   background: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
 }
 
-/* Section Headings */
+/* 🔖 Section Headings */
 .about-section h3 {
   font-size: 2rem;
   color: #ff416c;
 }
 
-/* List Styling */
+/* ✅ List Styling */
 .about-section ul {
   list-style: none;
   padding: 0;
@@ -80,34 +74,19 @@ body {
   margin-right: 0.5rem;
 }
 
-/* Footer Section */
+/* ⚡ Footer Section */
 .about-footer {
   padding: 1rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
-  width: 100%;
+  margin-top: 1rem;
 }
 
-.about-footer h3 {
-  font-size: 1.5rem;
-  color: #ffcc70;
-}
-
-.about-footer a {
-  color: #ff4b2b;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.about-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Fix for Smaller Screens */
+/* 🌐 Responsive Design */
 @media (max-width: 768px) {
   .aboutus {
+    top: 100px; /* Increase space for mobile navbar */
     width: 95%;
-    height: 85vh;
     padding: 1.5rem;
   }
 
@@ -127,7 +106,7 @@ body {
 
 @media (max-width: 480px) {
   .aboutus {
-    height: 80vh;
+    top: 120px; /* More space for smaller screens */
     padding: 1rem;
   }
 
